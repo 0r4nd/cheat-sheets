@@ -1,4 +1,14 @@
-## Create new project
+# Node Package Manager (npm)
 
+### New project
+```
+npx create-react-app MyApp
+cd MyApp
+```
 
-## Generic Util Functions
+### Launch/Stop
+```
+npm start
+```
+
+# Generic Util Functions
