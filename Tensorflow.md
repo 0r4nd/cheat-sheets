@@ -26,5 +26,5 @@ def plot_history(history, metrics = []):
 
 # exemple
 history = model.fit(X_train, y_train)
-plot_history(history, ['accuracy'])$
+plot_history(history, ['accuracy'])
 ```
