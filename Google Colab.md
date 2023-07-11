@@ -19,7 +19,7 @@ dataset_dir = os.path.join(path_, "datasets")
 model_dir = os.path.join(path_, "models")
 ```
 
-## Colab specific
+## Colab mount drive
 ```python
 from google.colab import drive
 drive.mount('/content/drive')
