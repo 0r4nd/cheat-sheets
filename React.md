@@ -16,7 +16,7 @@ Add it if missing (change the 'export PATH' line, save and relaunch terminal):
 code ~/zshrc
 ```
 
-### Start a new front-end project
+### Start a new front-end project (use UNLICENCED if private project)
 ```
 cd ~/code/0r4nd
 mkdir myproject && cd $_
@@ -27,17 +27,41 @@ Setup git:
 echo "node_modules" >> .gitignore
 git init
 git add .
-git commit -m "Init repo with yarn"
+git commit -m "Init repo"
+```
+Open the project with VSSCODE
+```
+code .
 ```
 
 ### Add some packages
+
+eslint:
 ```
 yarn add eslint --dev
 eslint --init
 git add .
 git commit -m "Added ESLint"
 ```
-
+setup .eslintrc.json
+```
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": "airbnb-base",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {
+      "no-console": "off",
+      "comma-dangle": "off",
+      "quotes": "off"
+    }
+}
+```
 ### Commands
 - ```npm start``` Starts the development server.
 - ```npm run build``` Bundles the app into static files for production.
