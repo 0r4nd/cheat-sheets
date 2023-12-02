@@ -7,6 +7,11 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get update && sudo apt-get install yarn
 ```
 
+### Make sure we have ./node_modules/.bin in our $PATH
+```
+code ~/zshrc
+```
+
 ### Create a new project
 ```
 npx create-react-app MyApp
