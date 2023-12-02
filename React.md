@@ -11,15 +11,23 @@ sudo apt-get update && sudo apt-get install yarn
 ```
 echo $PATH
 ```
-add it if missing:
+Add it if missing (change the 'export PATH' line, save and relaunch terminal):
 ```
 code ~/zshrc
 ```
 
-### Create a new project
+### Start a new front-end project
 ```
-npx create-react-app MyApp
-cd MyApp
+cd ~/code/0r4nd
+mkdir myproject && cd $_
+yarn init
+```
+Setup git:
+```
+echo "node_modules" >> .gitignore
+git init
+git add .
+git commit -m "Init repo with yarn"
 ```
 
 ### Add some packages
