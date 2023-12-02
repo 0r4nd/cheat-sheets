@@ -9,6 +9,10 @@ sudo apt-get update && sudo apt-get install yarn
 
 ### Make sure we have ./node_modules/.bin in our $PATH
 ```
+echo $PATH
+```
+add it if missing:
+```
 code ~/zshrc
 ```
 
