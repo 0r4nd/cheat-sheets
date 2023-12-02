@@ -1,6 +1,13 @@
-# Node Package Manager (npm)
+# Node Package Manager (npm + yarn)
 
-### New project
+### Install yarn if needed
+```
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install yarn
+```
+
+### Create a new project
 ```
 npx create-react-app MyApp
 cd MyApp
