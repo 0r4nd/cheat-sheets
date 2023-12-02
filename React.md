@@ -7,10 +7,12 @@ cd MyApp
 ```
 
 ### Add some packages
+```
 yarn add eslint --dev
 eslint --init
 git add .
 git commit -m "Added ESLint"
+```
 
 ### Commands
 - ```npm start``` Starts the development server.
