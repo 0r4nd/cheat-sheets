@@ -78,7 +78,10 @@ echo -e "const HtmlWebpackPlugin = require('html-webpack-plugin');\nconst path =
 
 mkdir src
 touch src/index.js
+echo "console.log("hello world");" >> src/index.js
 ```
+
+
 
 
 ### Developing
