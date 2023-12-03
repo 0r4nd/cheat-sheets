@@ -62,6 +62,14 @@ setup .eslintrc.json
     }
 }
 ```
+
+webpack:
+```
+yarn add webpack webpack-dev-server --dev
+```
+
+
+
 ### Commands
 - ```npm start``` Starts the development server.
 - ```npm run build``` Bundles the app into static files for production.
