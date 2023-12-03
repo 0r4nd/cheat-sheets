@@ -81,7 +81,13 @@ touch src/index.js
 echo "console.log(\"hello world\");" >> src/index.js
 ```
 
+## Optional
 
+jQuery
+```
+yarn add jquery
+echo -e "import $ from 'jquery';\n$(document).ready(() => console.log('DOM is ready!'));" >> src/index.js
+```
 
 
 ### Developing
