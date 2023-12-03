@@ -97,6 +97,12 @@ Run local dev server:
 webpack-dev-server
 ```
 
+Production bundle
+```
+echo "dist" >> .gitignore # run once
+webpack -p
+```
+
 
 ### Commands
 - ```npm start``` Starts the development server.
