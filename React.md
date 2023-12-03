@@ -73,6 +73,9 @@ yarn add webpack webpack-dev-server webpack-cli html-webpack-plugin --dev
 touch index.html
 echo -e "<\!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <script src=\"dist/bundle.js\"></script>\n  </body>\n</html>\n" >> index.html
 
+touch webpack.config.js
+echo -e "const HtmlWebpackPlugin = require('html-webpack-plugin');\nconst path = require('path');\n\nmodule.exports = {\n  mode: 'development',\n  entry: './src/index.js',\n  output: {\n    path: path.resolve(__dirname, './dist'),\n    filename: 'bundle.js',\n  },\n  plugins: [new HtmlWebpackPlugin()],\n};\n" >> webpack.config.js
+
 mkdir src
 touch src/index.js
 ```
