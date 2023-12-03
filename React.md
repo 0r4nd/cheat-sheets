@@ -65,9 +65,21 @@ setup .eslintrc.json
 
 webpack:
 ```
-yarn add webpack webpack-dev-server --dev
+yarn add webpack webpack-dev-server webpack-cli html-webpack-plugin --dev
 ```
 
+### Developing
+
+create first file:
+```
+mkdir src
+touch src/index.js # <- code in here
+```
+
+run local dev server:
+```
+webpack-dev-server
+```
 
 
 ### Commands
