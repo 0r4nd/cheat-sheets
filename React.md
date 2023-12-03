@@ -68,15 +68,19 @@ webpack:
 yarn add webpack webpack-dev-server webpack-cli html-webpack-plugin --dev
 ```
 
+### Basic configuration
+```
+touch index.html
+echo -e "<\!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <script src=\"dist/bundle.js\"></script>\n  </body>\n</html>\n" >> index.html
+
+mkdir src
+touch src/index.js
+```
+
+
 ### Developing
 
-create first file:
-```
-mkdir src
-touch src/index.js # <- code in here
-```
-
-run local dev server:
+Run local dev server:
 ```
 webpack-dev-server
 ```
