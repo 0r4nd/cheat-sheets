@@ -68,10 +68,17 @@ webpack:
 yarn add webpack webpack-dev-server webpack-cli html-webpack-plugin --dev
 ```
 
+babel:
+```
+yarn add babel-core babel-preset-es2015 --dev
+echo '{ "presets": [ "es2015" ] }' > .babelrc
+yarn add babel-loader # for webpack
+```
+
 ### Basic configuration
 ```
 touch index.html
-echo -e "<\!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <script src=\"dist/bundle.js\"></script>\n  </body>\n</html>\n" >> index.html
+echo -e "<\!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,fetch"></script>\n    <script src=\"dist/bundle.js\"></script>\n  </body>\n</html>\n" >> index.html
 
 touch webpack.config.js
 echo -e "const HtmlWebpackPlugin = require('html-webpack-plugin');\nconst path = require('path');\n\nmodule.exports = {\n  mode: 'development',\n  entry: './src/index.js',\n  output: {\n    path: path.resolve(__dirname, './dist'),\n    filename: 'bundle.js',\n  },\n  plugins: [new HtmlWebpackPlugin()],\n};\n" >> webpack.config.js
