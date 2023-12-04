@@ -100,7 +100,7 @@ webpack-dev-server
 Production bundle
 ```
 echo "dist" >> .gitignore # run once
-webpack -p
+webpack --mode production
 ```
 
 
