@@ -1,4 +1,4 @@
-# Node Package Manager (npm + yarn)
+# Node Package Manager (npm + yarn/npm)
 
 ### Install yarn if needed
 ```
@@ -22,6 +22,12 @@ cd ~/code/0r4nd
 mkdir myproject && cd $_
 yarn init
 ```
+```
+cd ~/code/0r4nd
+mkdir myproject && cd $_
+npm init -y
+```
+
 Setup git:
 ```
 echo "node_modules" >> .gitignore
@@ -66,6 +72,9 @@ setup .eslintrc.json
 webpack:
 ```
 yarn add webpack webpack-dev-server webpack-cli html-webpack-plugin --dev
+```
+```
+npm install webpack webpack-dev-server webpack-cli html-webpack-plugin --save-dev
 ```
 
 babel:
