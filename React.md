@@ -79,10 +79,19 @@ npm install webpack webpack-dev-server webpack-cli html-webpack-plugin --save-de
 
 babel:
 ```
+OLD!!
 yarn add babel-core babel-preset-es2015 --dev
 echo '{ "presets": [ "es2015" ] }' > .babelrc
 yarn add babel-loader # for webpack
 ```
+
+```
+yarn add @babel/core babel-loader @babel/preset-env @babel/preset-react --dev
+```
+```
+npm install @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
+```
+
 
 ### Basic configuration
 ```
