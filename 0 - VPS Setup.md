@@ -32,10 +32,25 @@ apt install docker
 docker -v
 ```
 ```python
-apt install docker.io
+apt install docker.io  (peut-être autre chose que docker.io, selon la version de ubuntu)
 ```
- (peut-être autre chose que docker.io, selon la version de ubuntu)
- 
+
+## Vérification docker, puis suppression de l'image
+```python
+docker run hello-world
+```
+```python
+docker ps -a
+```
+```python
+docker rm "id du container"
+```
+
+## Installation docker-compose
+```python
+apt install docker-compose
+```
+
 ## Installation nginx
 ```python
 docker run -d -p 80:80 nginx:latest
