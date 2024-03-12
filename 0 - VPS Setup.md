@@ -123,9 +123,19 @@ Username is ```admin```. Default password is ```adminadmin```.
 Change the default username and password. Go to ```Tools``` > ```Options```
 
 
+### Enable HTTPS to Encrypt Communications
 
+To secure the Web UI, you can install a free TLS certificate issued by Let’s Encrypt. First you need to install the Let’s Encrypt client (certbot)
+```
+sudo add-apt-repository ppa:certbot/certbot
+```
+```
+sudo apt install certbot python3-certbot-nginx
+```
 
-
-
-
-
+```Python3-certbot-nginx``` is the Certbot Nginx plugin. After they are installed, run the following
+command to automatically obtain and install Let’s Encrypt certificate.
+```
+sudo certbot --nginx --redirect --agree-tos --hsts --staple-ocsp --email your-email-address -d
+torrent.your-domain.com
+```
