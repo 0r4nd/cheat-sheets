@@ -66,6 +66,9 @@ sudo apt install software-properties-common
 sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
 ```
 ```
+sudo apt install qbittorrent-nox
+```
+```
 sudo apt update
 ```
 
