@@ -93,10 +93,14 @@ Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 ```
+```
+sudo systemctl start qbittorrent-nox
+```
+
 Note that if you change a systemd service file, you need to reload the systemd daemon for the
 change to take effect.
 ```
-sudo systemctl start qbittorrent-nox
+sudo systemctl daemon-reload
 ```
 
 Enable auto start at system boot time
