@@ -136,6 +136,5 @@ sudo apt install certbot python3-certbot-nginx
 ```Python3-certbot-nginx``` is the Certbot Nginx plugin. After they are installed, run the following
 command to automatically obtain and install Let’s Encrypt certificate.
 ```
-sudo certbot --nginx --redirect --agree-tos --hsts --staple-ocsp --email your-email-address -d
-torrent.your-domain.com
+sudo certbot --nginx --redirect --agree-tos --hsts --staple-ocsp --email your-email-address -d torrent.your-domain.com
 ```
