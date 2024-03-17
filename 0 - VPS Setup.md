@@ -138,3 +138,18 @@ command to automatically obtain and install Let’s Encrypt certificate.
 ```
 sudo certbot --nginx --redirect --agree-tos --hsts --staple-ocsp --email your-email-address -d torrent.your-domain.com
 ```
+
+
+## Jellyfin
+Pour obtenir des paquets via un protocole sécurisé, il faut d'abord activer sa prise en charge à l'aide de la commande ci-dessous :
+```
+sudo apt install apt-transport-https ca-certificates gnupg2 curl git -y
+```
+Ajout de la clé gpg
+```
+wget -O- https://repo.jellyfin.org/jellyfin_team.gpg.key | sudo apt-key add -
+```
+L'update devrait installer Jellyfin (il se trouve sur le port 8086 par defaut)
+```
+sudo apt update
+```
