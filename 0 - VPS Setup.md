@@ -149,7 +149,11 @@ Ajout de la clé gpg
 ```
 wget -O- https://repo.jellyfin.org/jellyfin_team.gpg.key | sudo apt-key add -
 ```
-L'update devrait installer Jellyfin (il se trouve sur le port 8086 par defaut)
+Update
 ```
 sudo apt update
+```
+Installation de Jellyfin (il se trouve sur le port 8086 par defaut)
+```
+sudo apt install jellyfin
 ```
