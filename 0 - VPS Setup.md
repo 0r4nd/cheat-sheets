@@ -157,3 +157,18 @@ Installation de Jellyfin (il se trouve sur le port 8086 par defaut)
 ```
 sudo apt install jellyfin
 ```
+Activation et lancement de Jellyfin
+```
+sudo systemctl enable jellyfin
+```
+```
+sudo systemctl start jellyfin
+```
+Vérification s'il fonctionne correctement
+```
+sudo systemctl status jellyfin --no-pager -l
+```
+Si on utilise un Firewall comme ufw, on peut lui ajouter une exception pour le port 8086
+```
+sudo ufw allow 8096
+```
