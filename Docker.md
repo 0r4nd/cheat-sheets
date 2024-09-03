@@ -25,7 +25,7 @@ docker volume prune
 ## logs
 check logs of a container
 ```shell
-docker logs --since=1h myblog-db-1
+docker logs --since=1h ${PWD##*/}-db-1
 ```
 check logs of the last build
 ```shell
@@ -47,7 +47,7 @@ docker compose -f docker-compose.dev.yml down --volumes
 
 enter database container (with psql)
 ```shell
-docker exec -it myblog-db-1 psql -U postgres
+docker exec -it ${PWD##*/}-db-1 psql -U postgres
 ```
 postgres volume backup (must be in the docker-compose directory)
 ```shell
