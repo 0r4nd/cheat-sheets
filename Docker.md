@@ -49,6 +49,12 @@ enter database container (with psql)
 ```shell
 docker exec -it myblog-db-1 psql -U postgres
 ```
+database backup (current folder project)
+```shell
+VOL=${PWD##*/}_pgdata
+DST=backup_${VOL}_$(date +%Y-%m-%d--%H.%M.%S).tar.gz
+docker run --rm -v "${VOL}:/data" -v "${PWD}:/backup-dir" ubuntu tar cvzf /backup-dir/${DST} /data
+```
 
 ## Health Status
 
