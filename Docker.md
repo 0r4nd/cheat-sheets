@@ -25,7 +25,7 @@ docker volume prune
 ## logs
 check logs of a container
 ```shell
-docker logs --since=1h ${PWD##*/}-db-1
+docker logs --since=20m ${PWD##*/}-db-1
 ```
 check logs of the last build
 ```shell
