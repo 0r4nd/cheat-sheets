@@ -49,7 +49,7 @@ enter database container (with psql)
 ```shell
 docker exec -it myblog-db-1 psql -U postgres
 ```
-database volume backup (must be in the docker-compose directory)
+postgres volume backup (must be in the docker-compose directory)
 ```shell
 VOL=${PWD##*/}_pgdata
 DST=backup_${VOL}_$(date +%Y-%m-%d--%H.%M.%S).tar.gz
