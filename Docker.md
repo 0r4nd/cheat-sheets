@@ -55,6 +55,12 @@ VOL=${PWD##*/}_pgdata
 DST=backup_${VOL}_$(date +%Y-%m-%d--%H.%M.%S).tar.gz
 docker run --rm -v "${VOL}:/data" -v "${PWD}:/backup-dir" ubuntu tar cvzf /backup-dir/${DST} /data
 ```
+postgres volume restore (must be in the docker-compose directory)
+```shell
+VOL=${PWD##*/}_pgdata
+SRC=backup_test_pgdata_2024-09-03--21.27.51.tar.gz
+docker run --rm -v "${VOL}:/data" -v "${PWD}:/backup-dir" ubuntu bash -c "rm -rf /data/{*,.*}; cd /data && tar xvzf /backup-dir/${SRC} --strip 1"
+```
 
 ## Health Status
 
