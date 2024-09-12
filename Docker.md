@@ -22,7 +22,8 @@ remove all volumes
 docker volume prune
 ```
 
-## logs
+## Debug / Logs
+
 check logs of a container
 ```shell
 docker logs --since=20m ${PWD##*/}-db-1
@@ -30,6 +31,10 @@ docker logs --since=20m ${PWD##*/}-db-1
 check logs of the last build
 ```shell
 docker compose logs
+```
+interactive shell (after docker compose up -d)
+```shell
+docker-compose exec nginx sh
 ```
 
 ## Build
